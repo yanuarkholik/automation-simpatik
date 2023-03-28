@@ -1,4 +1,4 @@
-const { Builder, By, Key, until } = require('selenium-webdriver');
+const { Builder, By, Key, until, Browser } = require('selenium-webdriver');
 var driver = new Builder().forBrowser('chrome').build();
 driver.manage().setTimeouts({implicit: (10000)});
 

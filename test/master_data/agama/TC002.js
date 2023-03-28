@@ -4,16 +4,16 @@ describe('Dapat menampilkan data Agama berdasarakan kata kunci yang tidak sesuai
     this.timeout(50000);
    
     beforeEach(function(){
-     
+        
     });
 
-    it('Sub menu Agama', async function(){
+    it('TC002', async function(){
         var baseurl = 'https://simpatik-fe.merapi.javan.id/';
         await homepage.go_to_url(baseurl);
 
         var name = "admin";
         var pass = "secret";
-        var agama = "Islam";
+
         var tidak_ada = "Agama yang tidak ada";
         await homepage.login_simpatik(name, pass);
         await homepage.clickByLinkText("Master Data");
@@ -29,5 +29,4 @@ describe('Dapat menampilkan data Agama berdasarakan kata kunci yang tidak sesuai
     afterEach(async function(){
         await homepage.closeBrowser();
     });
-
 })
