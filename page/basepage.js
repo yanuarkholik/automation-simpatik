@@ -43,16 +43,16 @@ class BasePage{
 
     // wait driver 
     async driverWaitById(id){
-        await driver.wait(until.elementLocated(By.id(id)));
+        await driver.wait(until.elementsLocated(By.id(id)));
     }
     async driverWaitByCss(css){
-        await driver.wait(until.elementLocated(By.css(css)));
+        await driver.wait(until.elementsLocated(By.css(css)));
     }
     async driverWaitByXpath(xpath){
-        await driver.wait(until.elementLocated(By.xpath(xpath)));
+        await driver.wait(until.elementsLocated(By.xpath(xpath)));
     }
     async driverWaitByLinkText(link){
-        await driver.wait(until.elementLocated(By.xpath(link)));
+        await driver.wait(until.elementsLocated(By.xpath(link)));
     }
 
     // tear down driver

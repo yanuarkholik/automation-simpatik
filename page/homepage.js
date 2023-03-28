@@ -6,10 +6,10 @@ class HomePage extends BasePage {
         await this.go_to_url(theURL);
     }
 
-    async login_cos(username, password){
-        await this.enterTextByName('username', username);
-        await this.enterTextByName('password', password);
-        await this.clickByCss('.btn-info');
+    async login_simpatik(username, password){
+        await this.enterTextById('username', username);
+        await this.enterTextById('password', password);
+        await this.clickByCss('button[type="submit"]');
     }
 }
 
